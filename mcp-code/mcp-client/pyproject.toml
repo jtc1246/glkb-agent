@@ -1,0 +1,22 @@
+[project]
+name = "mcp-client"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.51.0",
+    "arxiv>=2.2.0",
+    "beautifulsoup4>=4.13.4",
+    "duckduckgo-search>=8.0.1",
+    "mcp[cli]>=1.7.1",
+    "pymed>=0.8.9",
+    "python-dotenv>=1.1.0",
+    "requests>=2.32.3",
+    "wikipedia>=1.4.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "search-server",
+]
