@@ -1,7 +1,7 @@
 import sklearn
 import json
 
-path = 'bioasq/qwen25_72b_20250502_1.json'
+path = './outputs/pubmedqa_large_gpt_4o_1747573066.9261131.json'  # MODIFY HERE
 data = json.loads(open(path).read())
 
 def calculate_statistics(data: list):
