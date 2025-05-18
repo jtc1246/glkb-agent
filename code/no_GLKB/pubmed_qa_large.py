@@ -52,7 +52,7 @@ def check_format(response: str) -> tuple[bool, str]:
 
 
 data = json.loads(open(BASE_PATH + 'pubmedqa_large.json').read())
-data = [{'id': id, 'question': data[id]["QUESTION"], 'answer': data[id]['final_decision']} for id in data][:100]
+data = [{'id': id, 'question': data[id]["QUESTION"], 'answer': data[id]['final_decision']} for id in data]
 # print(len(data))
 LLM_FUNC = eval(llm)
 os.makedirs('./outputs', exist_ok=True)
