@@ -1,6 +1,6 @@
 # GLKB Agent
 
-## 1. Dataset
+## 1. Datasets
 
 #### 1.1 PubMedQA (1000 questions)
 
@@ -29,7 +29,7 @@ In each json file, has following keys:
 In RAG only test, it also has `"embedding_result"` and `"keyword_result"` keys, which are the information retrieved from GLKB using embedding search and keyword search (these are provided to the LLM to generate the answer).
 
 
-## 3. Tesing code
+## 3. Tesing codes
 
 The code include 3 parts, one is for no GLKB (ask LLM directly), one is normal GLKB agent (normal usage, not for testing), another one is GLKB agent for testing on the above datasets.
 
@@ -74,3 +74,7 @@ There are also some optional arguments, you can use `-h` to see details.
 You also need to set the API keys in [`config.py`](config.py), please note that [`config.py`](config.py) is in root directory of this repo, not in `code/GLKB_agent_testing` directory. And also no that no matter which LLM you choose, you always need to set the OpenAI API key, because the cypher agent will always use GPT.
 
 To use the GLKB agent, you need to connect to UMich vpn. Currently GLKB server only accepts connections from UMich network.
+
+You can run [`test_resumable.py`](code/GLKB_agent_testing/test_resumable.py) in any directory, and the results will be saves in `outputs` directory in your current directory.
+
+The progress can be resumed if the program exits unexpectedly, as long as the config is same (same llm, same dataset, and same id, and run in the same directory).
