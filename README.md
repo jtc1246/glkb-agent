@@ -78,3 +78,7 @@ To use the GLKB agent, you need to connect to UMich vpn. Currently GLKB server o
 You can run [`test_resumable.py`](code/GLKB_agent_testing/test_resumable.py) in any directory, and the results will be saves in `outputs` directory in your current directory.
 
 The progress can be resumed if the program exits unexpectedly, as long as the config is same (same llm, same dataset, and same id, and run in the same directory).
+
+## 4. MCP and deep research
+
+For MCP, please see the README in [mcp-code/README.md](mcp-code/README.md).
